@@ -1,0 +1,15 @@
+<odoo>
+
+    <!-- Librarian -->
+    <record id="group_library_librarian" model="res.groups">
+        <field name="name">Librarian</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+
+    <!-- Assistant -->
+    <record id="group_library_assistant" model="res.groups">
+        <field name="name">Library Assistant</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+
+</odoo>

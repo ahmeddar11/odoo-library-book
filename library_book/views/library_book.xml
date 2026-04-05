@@ -18,7 +18,15 @@
         <field name="name">library.book.form</field>
         <field name="model">library.book</field>
         <field name="arch" type="xml">
+
             <form>
+                <header>
+                    <field name="state" widget="statusbar" statusbar_visible="Available,Borrowed,lost"/>
+
+                    <button name="action_in_available" type="object" string="Available" class="btn-info"/>
+                    <button name="action_in_borrowed" type="object" string="Borrowed" class="btn-info"/>
+                    <button name="action_in_lost" type="object" string="lost" class="btn-danger"/>
+                </header>
                 <group col="2">
                     <field name="title"/>
                     <field name="total_copies"/>
