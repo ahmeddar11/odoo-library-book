@@ -6,6 +6,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="title"/>
+                <field name="name_author"/>
                 <field name="total_copies"/>
                 <field name="degt_library"/>
                 <field name="borrowed_copies"/>
@@ -29,6 +30,7 @@
                 </header>
                 <group col="2">
                     <field name="title"/>
+                    <field name="name_author"/>
                     <field name="total_copies"/>
                 </group>
                 <group col="2">
