@@ -1,0 +1,56 @@
+<odoo>
+
+    <record id="library_book_view_tree" model="ir.ui.view">
+        <field name="name">library.book.tree</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="title"/>
+                <field name="total_copies"/>
+                <field name="degt_library"/>
+                <field name="borrowed_copies"/>
+                <field name="available_copies"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="library_book_view_form" model="ir.ui.view">
+        <field name="name">library.book.form</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="2">
+                    <field name="title"/>
+                    <field name="total_copies"/>
+                </group>
+                <group col="2">
+                    <field name="degt_library"/>
+                    <field name="borrowed_copies"/>
+                </group>
+                <group>
+                    <field name="available_copies"/>
+                </group>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="library_book_action" model="ir.actions.act_window">
+        <field name="name">library.book</field>
+        <field name="res_model">library.book</field>
+    </record>
+
+
+    <menuitem
+            id="library_book_menu"
+            name="Library Book"
+            sequence="1"
+            action="library_book_action"
+
+    />
+
+</odoo>
