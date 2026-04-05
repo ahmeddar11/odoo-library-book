@@ -7,10 +7,7 @@ class LibraryBook(models.Model):
 
 
     title = fields.Char(required=1 , traking=True)
-<<<<<<< HEAD
-=======
     name_author = fields.Char(required=1 , traking=True)
->>>>>>> 3db38d1b985f15bd80052cef38d7655ffddad75a
     total_copies = fields.Integer(required=1, tracking=True)
     degt_library = fields.Boolean()
     borrowed_copies = fields.Integer()
